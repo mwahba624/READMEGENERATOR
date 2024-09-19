@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 import inquirer from "inquirer";
 import fs from "node:fs"
-import { renderLicenseBadge } from "./utils/generateMarkdown";
+import { renderLicenseBadge, renderLicenseSection } from "./utils/generateMarkdown.js";
+
 
 // TODO: Create an array of questions for user input
 const questions = [{
@@ -20,10 +21,35 @@ const questions = [{
     message: 'Write the installation process for your project!', 
    },
    {
+    type: 'input',
+    name: 'Usage',
+    message: 'How to use your app?', 
+   },
+   {
+    type: 'input',
+    name: 'Contribute',
+    message: 'How to Contribute?',
+   },
+   {
+    type: 'input',
+    name: 'Tests',
+    message: 'How to test your App?',
+   },
+   {
     type: 'list',
     name: 'License',
     message: 'Which license would you select?',
-    choices :['MIT','ISC', 'Apachev2.0', 'GPLv3', ]
+    choices :['MIT','ISC', 'Apachev2' ]
+   },
+   {
+    type: 'input',
+    name: 'Username',
+    message: 'What is your GitHub Link?',
+   },
+   {
+    type: 'input',
+    name: 'Email',
+    message: 'What is your Email address?', 
    },
 ];
 
@@ -50,17 +76,25 @@ ${data.Installation}
 - [Questions](#questions)
 
 ## Usage
-    -- todo --
 
-## License 
-${data.License}
+${data.Usage}
 
 ## How to Contribute 
-    -- todo --
+
+${data.Contribute}
+
 ## Tests
-    -- todo --
+
+${data.Tests}
+
+
+${renderLicenseSection(data.License)};
+
 ## Questions
-    --todo 
+GitHub Account: [${data.Username}](${data.Username})
+
+Reach me if you have more Questions: ${data.Email}
+
 ` ;
 
 fs.writeFile(fileName, readMeContent, (err) => {
@@ -74,9 +108,9 @@ fs.writeFile(fileName, readMeContent, (err) => {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then(answers => {
-        console.log(answers);
-        writeToFile('README.md', answers);
+    inquirer.prompt(questions).then(data => {
+        console.log(data);
+        writeToFile('README.md', data);
     })
 }
 // Function call to initialize app

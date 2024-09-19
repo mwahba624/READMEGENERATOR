@@ -1,12 +1,12 @@
 
-# michael ![Static Badge](https://img.shields.io/badge/License-ISC-blue)
+# KINGTUT ![Static Badge](https://img.shields.io/badge/License-MIT-blue)
 
 ## Description
 
-king
+README GEN
 
 ## Installation
-repo
+FORK REPO
 
 ## Table of contents
 
@@ -18,14 +18,24 @@ repo
 - [Questions](#questions)
 
 ## Usage
-    -- todo --
 
-## License 
-ISC
+by completing each section in README
 
 ## How to Contribute 
-    -- todo --
+
+completing it 
+
 ## Tests
-    -- todo --
+
+no errors
+
+
+## License 
+  [https://opensource.org/license/mit](https://opensource.org/license/mit)
+  ;
+
 ## Questions
-    --todo 
+GitHub Account: [google.com](google.com)
+
+Reach me if you have more Questions: someone@gmail.com
+

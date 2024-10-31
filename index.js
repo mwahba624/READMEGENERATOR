@@ -5,7 +5,7 @@ import { renderLicenseBadge, renderLicenseSection } from "./utils/generateMarkdo
 
 
 // TODO: Create an array of questions for user input
-const questions = [{
+const questions = [{ // array of questions
     type: 'input',
     name: 'Title',
     message: 'What is your project title?'
@@ -54,7 +54,7 @@ const questions = [{
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(fileName, data) { // function to write the file
 let readMeContent =
 `
 # ${data.Title} ${renderLicenseBadge(data.License)}
@@ -77,7 +77,7 @@ ${data.Installation}
 
 ## Usage
 
-${data.Usage}
+${data.Usage} 
 
 ## How to Contribute 
 

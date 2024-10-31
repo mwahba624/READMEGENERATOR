@@ -1,6 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
+function renderLicenseBadge(license) { // function to render the license badge
   let licenseBadge = '';
   switch(license){
     case 'MIT':
@@ -23,7 +23,7 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
+function renderLicenseLink(license) { // function to render the license link
   if(license === 'MIT') return  'https://opensource.org/license/mit';
     if(license === 'ISC') return 'https://opensource.org/license/isc-license-txt';
     if(license === 'Apachev2') return 'https://www.apache.org/licenses/LICENSE-2.0';
@@ -40,7 +40,7 @@ function renderLicenseSection(license) {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(data) { // function to generate the markdown
   return `# ${data.title}
 
 `;
